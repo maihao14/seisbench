@@ -32,3 +32,11 @@ Miscellaneous
     :members:
     :undoc-members:
     :show-inheritance:
+
+Active learning
+-----------------------------------
+
+.. automodule:: seisbench.generate.active_learning
+    :members:
+    :undoc-members:
+    :show-inheritance:

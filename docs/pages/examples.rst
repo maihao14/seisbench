@@ -122,6 +122,20 @@ Training Denoiser models
 
 Learn how to train a Denoiser model on a SeisBench dataset and create a noise dataset from continuous seismic data.
 
+.. _active_learning:
+
+Active learning loop
+--------------------
+.. raw:: html
+
+    <embed>
+        <a href="https://colab.research.google.com/github/seisbench/seisbench/blob/main/examples/03f_active_learning_phasenet.ipynb">
+            <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+        </a>
+    </embed>
+
+Run a model-agnostic active learning loop with uncertainty-based selection, callback-based labeling, and resumable state.
+
 
 .. _creating_a_dataset:
 

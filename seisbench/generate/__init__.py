@@ -13,6 +13,14 @@ from .augmentation import (
     RealNoise,
     RotateHorizontalComponents,
 )
+from .active_learning import (
+    ActiveLearningLoop,
+    ActiveLearningPool,
+    QueryStrategy,
+    RandomQueryStrategy,
+    RoundResult,
+    UncertaintyQueryStrategy,
+)
 from .generator import GenericGenerator, GroupGenerator, SteeredGenerator
 from .labeling import (
     PolarityLabeller,
@@ -50,6 +58,12 @@ __all__ = [
     "RandomArrayRotation",
     "RealNoise",
     "RotateHorizontalComponents",
+    "ActiveLearningLoop",
+    "ActiveLearningPool",
+    "QueryStrategy",
+    "RandomQueryStrategy",
+    "RoundResult",
+    "UncertaintyQueryStrategy",
     "GenericGenerator",
     "GroupGenerator",
     "SteeredGenerator",
