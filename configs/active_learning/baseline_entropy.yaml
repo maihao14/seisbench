@@ -1,0 +1,14 @@
+﻿strategy:
+  name: uncertainty
+  method: entropy
+
+uncertainty:
+  method: softmax
+  score_metric: predictive_entropy
+  batch_size: 64
+
+filtering:
+  enabled: false
+
+batch:
+  size: 128

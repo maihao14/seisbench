@@ -1,0 +1,35 @@
+﻿strategy:
+  name: hybrid_uncertainty_diversity
+  mode: topk_uncertainty_then_cluster
+  top_k: 1000
+  alpha: 0.7
+  beta: 0.3
+
+uncertainty:
+  method: ensemble
+  score_metric: js_divergence
+  checkpoints:
+    - ckpt_a.pt
+    - ckpt_b.pt
+    - ckpt_c.pt
+  batch_size: 64
+
+diversity:
+  method: kmeans_representative
+  representative_method: medoid
+
+filtering:
+  enabled: true
+  low_energy:
+    enabled: true
+    rms_threshold: 1.0e-4
+  abnormal:
+    enabled: true
+    max_abs_threshold: 1.0e3
+    flat_std_threshold: 1.0e-8
+  duplicate:
+    enabled: true
+    method: metadata
+
+batch:
+  size: 128

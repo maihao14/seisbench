@@ -1,0 +1,8 @@
+﻿strategy:
+  name: random
+
+filtering:
+  enabled: false
+
+batch:
+  size: 128

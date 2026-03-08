@@ -1,0 +1,21 @@
+﻿strategy:
+  name: representative_init
+  selection_method: kmeans_medoid
+  embedding_layer: encoder_global_pool
+  seed: 7
+
+filtering:
+  enabled: true
+  low_energy:
+    enabled: true
+    rms_threshold: 1.0e-4
+  abnormal:
+    enabled: true
+    max_abs_threshold: 1.0e3
+    flat_std_threshold: 1.0e-8
+  duplicate:
+    enabled: true
+    method: metadata
+
+batch:
+  size: 500

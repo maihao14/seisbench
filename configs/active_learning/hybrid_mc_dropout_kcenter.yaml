@@ -1,0 +1,33 @@
+﻿strategy:
+  name: hybrid_uncertainty_diversity
+  mode: topk_uncertainty_then_kcenter
+  top_k: 1000
+  alpha: 0.7
+  beta: 0.3
+
+uncertainty:
+  method: mc_dropout
+  n_passes: 20
+  score_metric: pick_time_variance
+  batch_size: 64
+
+diversity:
+  method: kcenter_greedy
+  uncertainty_weight: 0.1
+
+filtering:
+  enabled: true
+  low_energy:
+    enabled: true
+    rms_threshold: 1.0e-4
+  abnormal:
+    enabled: true
+    max_abs_threshold: 1.0e3
+    flat_std_threshold: 1.0e-8
+  duplicate:
+    enabled: true
+    method: embedding_cosine
+    similarity_threshold: 0.999
+
+batch:
+  size: 128
